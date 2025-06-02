@@ -5,7 +5,7 @@ on: [push]
 jobs: 
   saludar:
     runs-on: ubuntu-latest
-      steps:
+    steps:
         - name: Muestra mensaje Hola mundo
-        run: echo "Hola mundo"
+          run: echo "Hola mundo"
         
