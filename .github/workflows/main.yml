@@ -1,6 +1,8 @@
 name: hola mundo
 
 on: 
+  schedule:
+    - cron: "*/5 * * * *"
   push:
     branches:
       - main
