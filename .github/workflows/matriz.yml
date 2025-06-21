@@ -1,0 +1,16 @@
+name: Ejemplo Matriz
+
+on:
+  workflow_dispatch:
+
+jobs: 
+  build:
+    strategy:
+      fail-fast: false
+      matrix: 
+        sistema_operativo: [windows-latest, ubuntu-latest, macos-latest]
+    name: matriz
+    runs-on: ${{ matrix.sistema_operativo }}
+    steps:
+      - name: imprimir 50
+        run: echo "Estanos usando el sistema operativo 4{{ matrix.sistema_operativo }}"
